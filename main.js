@@ -1,12 +1,20 @@
+//add event listener to search button
+let searchBtn = document.querySelector("#search-btn");
+let userInput = document.querySelector("#search-bar");
+searchBtn.addEventListener("click", function () {
+  fetch (`http://recipepuppyproxy.herokuapp.com/api/?i=${userInput.value}`)
+    .then(convertFromJson)
+    .then(displayRecipes);
+});
+
 function convertFromJson (recipes) {
   return recipes.json();
 }
 
 function displayRecipes (recipes) {
   console.log(recipes);
-  
+
   // define variables
-  let userInput = document.querySelector("#search-term");
   let container = document.querySelector(".container");
   let recipeDisplay = '';
 
@@ -15,13 +23,6 @@ function displayRecipes (recipes) {
 
   // define variable to hold indexes
     let recipe = recipes.results[i];
-
-  // search bar
-    // need to look through every single recipes.results[i].ingredients created
-    // if (recipe.ingredients === userInput.toUpperCase())
-    // return those recipes
-    // else
-    // return no results found
 
   // template literal HTML to show search results
     let recipeCode = `
@@ -36,9 +37,5 @@ function displayRecipes (recipes) {
     `;
     recipeDisplay += recipeCode;
   }
-  container.innerHTML += recipeDisplay;
+  container.innerHTML = recipeDisplay;
 }
-
-fetch ("http://recipepuppyproxy.herokuapp.com/api/?i=chocolate")
-  .then(convertFromJson)
-  .then(displayRecipes);
