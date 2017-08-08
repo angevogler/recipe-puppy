@@ -1,6 +1,6 @@
 body {
-  margin-left: 100px;
-  margin-right: 100px;
+  margin-left: 200px;
+  margin-right:200px;
   font-family: "Gil Sands", Arial, sans-serif;
 }
 
@@ -8,21 +8,37 @@ header {
   display: flex;
   justify-content: space-between;
   width: 1200px;
-  padding: 20px 45px;
+  padding: 10px 45px;
   border-bottom: 10px steelBlue dotted;
+  background-color: #B0C4DE;
+}
+
+h1 {
+  font-family: 'Shadows Into Light Two', cursive;
+  font-size: 60px;
+  color: #F0FFF0;
 }
 
 #search-bar {
   height: 30px;
   width: 300px;
-  margin-top: 30px;
+  margin-top: 80px;
+}
+
+#search-btn {
+  background-color: #F08080;
+  border: none;
+  border-radius: 5px;
+  height: 30px;
+  width: 90px;
 }
 
 .container {
   display: flex;
   flex-wrap: wrap;
   width: 1200px;
-  padding: 20px;
+  padding: 45px;
+  background-color: #F0FFF0;
 }
 
 figure {
@@ -38,7 +54,8 @@ figcaption {
   position: absolute;
   bottom: 50px;
   left: 0px;
-  right: 70px;
+  right: 25px;
   padding: 5px;
-  background: lightSalmon;
+  background: #F08080;
+  color: #2F4F4F;
 }
