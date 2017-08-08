@@ -1,0 +1,44 @@
+body {
+  margin-left: 100px;
+  margin-right: 100px;
+  font-family: "Gil Sands", Arial, sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 1200px;
+  padding: 20px 45px;
+  border-bottom: 10px steelBlue dotted;
+}
+
+#search-bar {
+  height: 30px;
+  width: 300px;
+  margin-top: 30px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1200px;
+  padding: 20px;
+}
+
+figure {
+  position: relative;
+}
+
+.thumbnail {
+  width: 200px;
+  height: 200px;
+}
+
+figcaption {
+  position: absolute;
+  bottom: 50px;
+  left: 0px;
+  right: 70px;
+  padding: 5px;
+  background: lightSalmon;
+}
